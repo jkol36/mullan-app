@@ -27,27 +27,27 @@ const StreamList: React.FC = () => {
         <StreamRow>
           <StreamHeader>
             <StreamAvatar />
-            <StreamUsername numberOfLines={1}>danrigoni</StreamUsername>
+            <StreamUsername numberOfLines={1}>jkol36</StreamUsername>
           </StreamHeader>
 
           <StreamDescription numberOfLines={2}>
-            Live coding com React Native e TypeScript.
+            21 Savage at Wells Fargo Center
           </StreamDescription>
 
           <StreamCategory numberOfLines={1}>
-            Science & Technology
+            Outdoors / Concerts
           </StreamCategory>
         </StreamRow>
 
         <TagRow>
           <TagView>
-            <TagText>Portuguese</TagText>
+            <TagText>Concerts</TagText>
           </TagView>
           <TagView>
-            <TagText>Mobile Development</TagText>
+            <TagText>Wells Fargo Center</TagText>
           </TagView>
           <TagView>
-            <TagText>React Native</TagText>
+            <TagText>21 Savage</TagText>
           </TagView>
         </TagRow>
       </StreamColumn>

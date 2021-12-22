@@ -8,11 +8,9 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import Following from './pages/Following';
 import ComingSoon from './pages/ComingSoon';
 import GoLive from './pages/GoLive';
+import MapComponent from './pages/Map';
+import Login from './pages/Login';
 import styled from 'styled-components/native';
-
-
-
-
 
 import colors from './styles/colors';
 
@@ -51,7 +49,8 @@ const Routes: React.FC = () => (
         activeTintColor: colors.purple,
       }}
     >
-      <Screen name="Following" component={Following} options={{
+    <Screen name="Login" component={Login} options={{tabBarIcon: () => {<Text>  </Text>}}} />
+    <Screen name="Map" component={MapComponent} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
             <Ionicons
@@ -62,11 +61,11 @@ const Routes: React.FC = () => (
           )
         }
       }}/>
-      <Screen name="Discover" component={ComingSoon} options={{
+      <Screen name="Following" component={Following} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
-            <MaterialCommunityIcons
-              name="compass-outline"
+            <Ionicons
+              name="md-heart"
               size={size}
               color={focused ? colors.purple : colors.black}
             />
@@ -83,6 +82,18 @@ const Routes: React.FC = () => (
           )
         }
       }}/>
+      <Screen name="Discover" component={ComingSoon} options={{
+        tabBarIcon: ({ size, focused }) => {
+          return (
+            <MaterialCommunityIcons
+              name="compass-outline"
+              size={size}
+              color={focused ? colors.purple : colors.black}
+            />
+          )
+        }
+      }}/>
+      
       <Screen name="Browse" component={ComingSoon} options={{
         tabBarIcon: ({ size, focused }) => {
           return (
@@ -94,17 +105,7 @@ const Routes: React.FC = () => (
           )
         }
       }}/>
-      <Screen name="Sports" component={ComingSoon} options={{
-        tabBarIcon: ({ size, focused }) => {
-          return (
-            <MaterialCommunityIcons
-              name="trophy-outline"
-              size={size}
-              color={focused ? colors.purple : colors.black}
-            />
-          )
-        }
-      }}/>
+      
     </Navigator>
   </NavigationContainer>
 );

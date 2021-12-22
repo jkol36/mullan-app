@@ -9,7 +9,7 @@ import {
   Info,
   List
 } from './styles';
-
+import { Image } from 'react-native';
 import data from './data'
 
 interface ItemProps {
@@ -19,11 +19,11 @@ interface ItemProps {
 const CategoryList: React.FC = () => {
   const CategoryItem: React.FC<ItemProps> = ({ item }) => (
     <CategoryContainer>
-      <CategoryImage source={item.source}/>
+      <Image style={{width: 150, height: 150}} source={{uri: 'https://static-cdn.jtvnw.net/jtv_user_pictures/xqcow-profile_image-9298dca608632101-70x70.jpeg'}}/>
       <CategoryName numberOfLines={1}>{ item.name }</CategoryName>
       <CategoryStatus>
         <RedCircle />
-        <Info>120.9k</Info>
+        <Info>{Math.floor(Math.random(129000, 130000) * 100)}k viewers</Info>
       </CategoryStatus>
     </CategoryContainer>
   )
